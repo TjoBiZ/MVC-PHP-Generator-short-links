@@ -5,7 +5,7 @@
 //  `reallink` VARCHAR(300) NULL,
 //  `shortlink` VARCHAR(45) NULL,
 //  `ipuser` VARCHAR(45) NULL DEFAULT 'null',
-//  `date` VARCHAR(45) NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
+//  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 //  PRIMARY KEY (`id`));
 
 return [

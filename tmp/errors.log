@@ -318,3 +318,41 @@ _________________________
 _________________________
 [2020-04-09 00:31:10] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
 _________________________
+[2020-04-09 02:56:00] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:03:15] Text error: SQLSTATE[HY000]: General error: 1 no such table: slinks | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/rb.php | Строка: 810 
+_________________________
+[2020-04-09 03:15:49] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:16:31] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:16:33] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:16:34] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:18:54] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:19:37] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:23:58] Text error: Controller app\controllers\RstController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
+_________________________
+[2020-04-09 03:24:03] Text error: SQLSTATE[HY000]: General error: 1 no such table: slinks | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/rb.php | Строка: 810 
+_________________________
+[2020-04-09 03:25:19] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:25:37] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:26:32] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:26:32] Text error: Page not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 41 
+_________________________
+[2020-04-09 03:26:57] Text error: Call to undefined method app\controllers\RedirectController::getView() | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 33 
+_________________________
+[2020-04-09 03:27:03] Text error: Page not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 41 
+_________________________
+[2020-04-09 03:29:51] Text error: SQLSTATE[HY000]: General error: 1 no such table: slinks | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/rb.php | Строка: 810 
+_________________________
+[2020-04-09 04:09:46] Text error: Call to undefined method mysqli_result::bind_param() | Файл: /Users/joker/Downloads/websites/mvc/app/controllers/RedirectController.php | Строка: 15 
+_________________________
+[2020-04-09 04:11:09] Text error: Cannot pass parameter 2 by reference | Файл: /Users/joker/Downloads/websites/mvc/app/controllers/RedirectController.php | Строка: 15 
+_________________________
