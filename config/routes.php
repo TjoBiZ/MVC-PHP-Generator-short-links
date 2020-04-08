@@ -1,9 +1,11 @@
 <?php
 
 	use tjo\Router;
+	use tjo\CheckSLinks;
 
 	//This rule check short links in base for then redirection real link (Logic 'then' in the controller)
-	Router::add('^.{6}$', ['controller' => 'Redirect', 'action' => 'index']);
+	Router::add('^.{6}$', CheckSLinks::checkShortLinksInBase());
+	//Router::add('^.{6}$', ['controller' => 'Redirect', 'action' => 'index']);
 
 	//default routes
 	//This rules for admin panel
