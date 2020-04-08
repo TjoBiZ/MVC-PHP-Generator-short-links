@@ -8,7 +8,7 @@ class NewurlController extends AppController {
 			//debug($this->route);
 			//debug($this->view);
 			//debug($this->controller );
-			echo __METHOD__;
+			//echo __METHOD__;
 			echo 'This is generator links';
 		}
 
