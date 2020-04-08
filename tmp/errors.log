@@ -356,3 +356,9 @@ _________________________
 _________________________
 [2020-04-09 04:11:09] Text error: Cannot pass parameter 2 by reference | Файл: /Users/joker/Downloads/websites/mvc/app/controllers/RedirectController.php | Строка: 15 
 _________________________
+[2020-04-09 04:34:46] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+_________________________
+[2020-04-09 04:35:03] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+_________________________
+[2020-04-09 04:35:07] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+_________________________
