@@ -9,6 +9,7 @@
 	<title>Error</title>
 </head>
 <body>
-<h1>It was error</h1>
+<h2>This is address not exist!</h2>
+<div><a href="/">Go back to home</a></div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>It was error.</h1>
-<p><strong>Code error:</strong> <?= $errno ?></p>
+<p><strong>Code error:</strong> <?= $errono ?></p>
 <p><strong>Text error:</strong> <?= $errstr ?></p>
 <p><strong>The file has get error:</strong> <?= $errfile ?></p>
 <p><strong>The line has error:</strong> <?= $errline ?></p>
