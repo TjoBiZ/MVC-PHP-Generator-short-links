@@ -1,0 +1,6 @@
+##It's set utf-8 default
+AddDefaultCharset utf-8
+##Enable enging redirect
+RewriteEngine On
+##Redirect all query to public folder for guest site
+RewriteRule	(.*) public/$1

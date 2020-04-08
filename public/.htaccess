@@ -1,0 +1,4 @@
+## If file or folder on query not exist then redirect all query to index.php with Get parrametrs sent query + [L, QSA] Last, QSA - for working GET parametrs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php?$1 [L,QSA]

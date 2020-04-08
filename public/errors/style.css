@@ -1,0 +1,19 @@
+body {
+	display: flex;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to bottom left, rgb(203, 207, 250), rgb(204, 217, 250), rgb(205, 226, 251), rgb(207, 236, 251), rgb(208, 245, 252), rgb(209, 255, 252), rgb(217, 254, 246), rgb(224, 253, 239), rgb(232, 253, 233), rgb(240, 252, 227), rgb(247, 251, 220), rgb(255, 250, 214));
+}
+h1 {
+	font-size: 10em;
+}
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: darkblue;
+}
