@@ -20,12 +20,38 @@ class NewurlController extends AppController {
 
 			if(isset($resultlinks['shortlink'])) {
 				echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
-				die();
 			} else {
-				echo 'generation new link';
+				$slink = $this->generatorSortLink();
+				//check short link about exist in SQL base
+				$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
+				if (isset($resultlinks['shortlink'])) {
+					$count = 0;
+					while ($count < 100) {
+						$count++;
+						$slink = $this->generatorSortLink();
+						$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
+						if (!isset($resultlinks['shortlink'])) {
+							echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
+							break;
+						}
+					}
+				} else {
+					echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
+				}
 			}
+			die();
+		}
 
-			echo 'This is generator links';
+		//This method does generation short link
+		public function generatorSortLink() {
+			$symbols = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+			$randomlink = array(); //remember to declare $pass as an array
+			$symbolLength = strlen($symbols) - 1; //put the length -1 in cache
+			for ($i = 0; $i < 6; $i++) {
+				$n = rand(0, $symbolLength);
+				$randomlink[] = $symbols[$n];
+			}
+			return implode($randomlink); //turn the array into a string
 		}
 
 }
