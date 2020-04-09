@@ -25,6 +25,12 @@ class NewurlController extends AppController {
 			if(!isset($reallink[0])) {
 			$reallink[0] = htmlspecialchars($rl);
 				}
+			//Prohibit does link to site generation links, because any people can do loops
+			$regex_host = str_replace('.', '\\.', $_SERVER['HTTP_HOST']);
+			preg_match('/'.$regex_host.'/', $reallink[0], $checkloop);
+				if ($checkloop[0]) {
+					die();
+				}
 			//"SELECT * FROM slinks.slinks WHERE shortlink LIKE '%$shortlink%'"
 			$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE reallink LIKE ? LIMIT 1", [ "$reallink[0]" ]);
 
