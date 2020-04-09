@@ -1,38 +1,20 @@
-[2020-04-09 04:50:50] Text error: Page not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 41 
+[2020-04-09 19:36:48] Text error: Controller app\controllers\LiykpoController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:51:04] Text error: Controller app\controllers\RstrsController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
+[2020-04-09 19:36:54] Text error: Controller app\controllers\LiykpoController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:51:10] Text error: Controller app\controllers\RstrsController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
+[2020-04-09 19:40:32] Text error: Controller app\controllers\LiykpoController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:51:14] Text error: Controller app\controllers\RstrsrController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
+[2020-04-09 19:40:37] Text error: Controller app\controllers\LiykpoController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:51:20] Text error: Controller app\controllers\RstrsrController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
+[2020-04-09 21:26:38] Text error: Controller app\controllers\LiykpoController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:53:00] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+[2020-04-09 21:27:59] Text error: Controller app\controllers\GycteuController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 04:56:12] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+[2020-04-09 21:31:04] Text error: Controller app\controllers\GycteuController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 05:07:18] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+[2020-04-09 21:31:18] Text error: Controller app\controllers\GycteuController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 05:07:31] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
+[2020-04-09 21:55:57] Text error: Controller app\controllers\GycteuController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________
-[2020-04-09 05:08:16] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 05:08:28] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 05:08:54] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 05:09:08] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 05:11:57] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 10:56:00] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 10:56:12] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 11:07:19] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 12:32:29] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
-_________________________
-[2020-04-09 15:03:49] Text error: syntax error, unexpected ')', expecting ']' | Файл: /Users/joker/Downloads/websites/mvc/app/controllers/NewurlController.php | Строка: 40 
+[2020-04-09 21:58:29] Text error: Controller app\controllers\GycteuController not found | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/Router.php | Строка: 38 
 _________________________

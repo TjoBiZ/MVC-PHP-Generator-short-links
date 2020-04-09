@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- AJAX API JSON Generator short links on JavaScript -->
+	<script type="text/javascript" src="/frontend/default/js/slinks.js" async></script>
 
 	<style>
 		body {
@@ -20,6 +22,9 @@
 			justify-content: center;
 			align-items: center;
 			background-image: linear-gradient(to bottom left, rgb(203, 207, 250), rgb(204, 217, 250), rgb(205, 226, 251), rgb(207, 236, 251), rgb(208, 245, 252), rgb(209, 255, 252), rgb(217, 254, 246), rgb(224, 253, 239), rgb(232, 253, 233), rgb(240, 252, 227), rgb(247, 251, 220), rgb(255, 250, 214));
+		}
+		.showlinks {
+			display: none;
 		}
 	</style>
 	<?=$this->getMeta();?>

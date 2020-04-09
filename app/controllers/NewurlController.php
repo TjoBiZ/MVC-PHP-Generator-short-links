@@ -9,14 +9,24 @@ class NewurlController extends AppController {
 			//debug($this->view);
 			//debug($this->controller );
 			//echo __METHOD__;
-			//Regex inversion - example (?<=r)find - this find word "find" before letter 'r'.
-			preg_match('/(?<=:\/\/).*/', $_POST['reallink'], $reallink);
-			if (!isset($reallink[0])) {
-				$reallink[0] = $_POST['reallink'];
+			//Delete 'space' and new rows 'enter' - /n
+			$reallink = str_replace(PHP_EOL, ' ', $_POST['reallink']);
+			if (strpos($reallink, ' ')) {
+				$rl = stristr($reallink, ' ', true);
+				preg_match('/(?<=:\/\/).*/', $rl, $reallink);
+			} else {
+				$rl = $reallink;
+				//Regex inversion - example (?<=r)find - this find word "find" before letter 'r'.
+				preg_match('/(?<=:\/\/).*/', $_POST['reallink'], $reallink);
+				if(empty($reallink[0])) {
+					$reallink[0] = htmlspecialchars($rl);
+				}
 			}
-			$reallink[0] = htmlspecialchars($reallink[0]);
+			if(!isset($reallink[0])) {
+			$reallink[0] = htmlspecialchars($rl);
+				}
 			//"SELECT * FROM slinks.slinks WHERE shortlink LIKE '%$shortlink%'"
-			$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE reallink LIKE ? LIMIT 1", [ "%$reallink[0]%" ]);
+			$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE reallink LIKE ? LIMIT 1", [ "$reallink[0]" ]);
 
 			if(isset($resultlinks['reallink'])) {
 				echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
@@ -25,13 +35,13 @@ class NewurlController extends AppController {
 				$slink = $this->generatorSortLink();
 				$ip = $this->getIpUser();
 				//check short link about exist in SQL base
-				$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
+				$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "$slink" ]);
 				if (isset($resultlinks['shortlink'])) {
 					$count = 0;
 					while ($count < 100) {
 						$count++;
 						$slink = $this->generatorSortLink();
-						$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
+						$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "$slink" ]);
 						if (!isset($resultlinks['shortlink'])) {
 							\R::exec("INSERT INTO `slinks`.`slinks` (`reallink`, `shortlink`, `ipuser`) VALUES ('$reallink[0]', '$slink', '$ip')");
 							echo json_encode(['reallink' => $reallink[0], 'shortlink' => $slink]);
