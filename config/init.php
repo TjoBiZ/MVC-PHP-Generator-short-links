@@ -1,6 +1,6 @@
 <?php
 
-define("DEBUG", 0); //Settings: develop mode or production mode. 1 - show errors, 0 - hide errors
+define("DEBUG", 1); //Settings: develop mode or production mode. 1 - show errors, 0 - hide errors
 define("ROOT", dirname(__DIR__));
 define("SITEFILES", ROOT . '/public');
 define("APP", ROOT . '/app'); //The classes for develop functional site

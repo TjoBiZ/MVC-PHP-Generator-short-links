@@ -13,7 +13,7 @@ class CheckSLinks {
 			if (!$conn) {
 				die("Connection failed: " . mysqli_connect_error());
 			}
-			$slink = $conn->query("SELECT * FROM slinks.slinks WHERE shortlink LIKE '%$matches[0]%'");
+			$slink = $conn->query("SELECT * FROM slinks.slinks WHERE shortlink LIKE '$matches[0]'");
 			if ($slink->num_rows) {
 				return array('controller' => 'Redirect', 'action' => 'index');
 			}

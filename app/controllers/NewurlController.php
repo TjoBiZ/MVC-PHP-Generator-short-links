@@ -60,13 +60,21 @@ class NewurlController extends AppController {
 		//This method does generation short link
 		public function generatorSortLink() {
 			$symbols = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-			$randomlink = array(); //remember to declare $pass as an array
-			$symbolLength = strlen($symbols) - 1; //put the length -1 in cache
-			for ($i = 0; $i < 6; $i++) {
-				$n = rand(0, $symbolLength);
-				$randomlink[] = $symbols[$n];
+			$count = 0;
+			while ($count < 100) {
+				$count++;
+				$randomlink = array(); //remember to declare $pass as an array
+				$symbolLength = strlen($symbols) - 1; //put the length -1 in cache
+				for ($i = 0; $i < 6; $i++) {
+					$n = rand(0, $symbolLength);
+					$randomlink[] = $symbols[$n];
+				}
+				$resultlink = implode($randomlink);
+				preg_match('/^[a-z]{6}$/', $resultlink, $forbidenlink);
+				if (!isset($forbidenlink[0])) {
+					return implode($randomlink); //turn the array into a string
+				}
 			}
-			return implode($randomlink); //turn the array into a string
 		}
 
 		//This method get ip address user.

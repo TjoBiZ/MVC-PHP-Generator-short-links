@@ -44,8 +44,8 @@ window.onload = function () {
                 var result = JSON.parse(xhrwp.response); // xhrwp.response; // developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response
                 if (result.shortlink.length == 6) {
                     document.querySelector('.showlinks').style.display = 'block';
-                    document.querySelector('.linkresult').innerHTML = '<a href="http://' + result.reallink + '" target="_blank">http://'+ result.reallink +'</a>';
-                    document.querySelector('.shortlinkresult').innerHTML = '<a href="' + location.origin + '/' + result.shortlink +'" target="_blank">'+ location.origin + '/' + result.shortlink +'</a>';
+                    document.querySelector('.linkresult').innerHTML = '<a href="http://' + result.reallink + '" target="_blank">'+ result.reallink +'</a>';
+                    document.querySelector('.shortlinkresult').innerHTML = '<a href="' + location.origin + '/' + result.shortlink +'" target="_blank">'+ location.hostname + '/' + result.shortlink +'</a>';
                 }
                 //console.log(result); //debug logic
                 //console.log(serchedresult); //debug logic
