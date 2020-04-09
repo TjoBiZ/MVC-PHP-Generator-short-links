@@ -34,3 +34,5 @@ _________________________
 _________________________
 [2020-04-09 12:32:29] Text error: Not found view /Users/joker/Downloads/websites/mvc/app/views/Newurl/generation.php | Файл: /Users/joker/Downloads/websites/mvc/vendor/tjo/core/base/View.php | Строка: 38 
 _________________________
+[2020-04-09 15:03:49] Text error: syntax error, unexpected ')', expecting ']' | Файл: /Users/joker/Downloads/websites/mvc/app/controllers/NewurlController.php | Строка: 40 
+_________________________

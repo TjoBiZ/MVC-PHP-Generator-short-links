@@ -18,10 +18,12 @@ class NewurlController extends AppController {
 			//"SELECT * FROM slinks.slinks WHERE shortlink LIKE '%$shortlink%'"
 			$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE reallink LIKE ? LIMIT 1", [ "%$reallink[0]%" ]);
 
-			if(isset($resultlinks['shortlink'])) {
+			if(isset($resultlinks['reallink'])) {
 				echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
+				die();
 			} else {
 				$slink = $this->generatorSortLink();
+				$ip = $this->getIpUser();
 				//check short link about exist in SQL base
 				$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
 				if (isset($resultlinks['shortlink'])) {
@@ -31,13 +33,16 @@ class NewurlController extends AppController {
 						$slink = $this->generatorSortLink();
 						$resultlinks = \R::getRow( "SELECT * FROM slinks.slinks WHERE shortlink LIKE ? LIMIT 1", [ "%$slink%" ]);
 						if (!isset($resultlinks['shortlink'])) {
-							echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
-							break;
+							\R::exec("INSERT INTO `slinks`.`slinks` (`reallink`, `shortlink`, `ipuser`) VALUES ('$reallink[0]', '$slink', '$ip')");
+							echo json_encode(['reallink' => $reallink[0], 'shortlink' => $slink]);
+							die();
 						}
 					}
-				} else {
-					echo json_encode(['reallink' => $resultlinks['reallink'], 'shortlink' => $resultlinks['shortlink']]);
+					echo json_encode(['reallink' => $reallink[0], 'shortlink' => 'Pls, try again generation link']);
+					die();
 				}
+				\R::exec("INSERT INTO `slinks`.`slinks` (`reallink`, `shortlink`, `ipuser`) VALUES ('$reallink[0]', '$slink', '$ip')");
+				echo json_encode(['reallink' => $reallink[0], 'shortlink' => $slink]);
 			}
 			die();
 		}
@@ -52,6 +57,24 @@ class NewurlController extends AppController {
 				$randomlink[] = $symbols[$n];
 			}
 			return implode($randomlink); //turn the array into a string
+		}
+
+		//This method get ip address user.
+		public function getIpUser() {
+			$keys = [
+				'HTTP_CLIENT_IP',
+				'HTTP_X_FORWARDED_FOR',
+				'REMOTE_ADDR'
+			];
+			foreach ($keys as $key) {
+				if (!empty($_SERVER[$key])) {
+					//$ip = trim(end(explode(',', $_SERVER[$key])));
+					$ip = htmlspecialchars($_SERVER[$key]);
+					if (filter_var($ip, FILTER_VALIDATE_IP)) {
+						return $ip;
+					}
+				}
+			}
 		}
 
 }
